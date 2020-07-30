@@ -36,7 +36,7 @@ const componentList = [
     AppRoutingModule,
     BrowserAnimationsModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyDdkvJP9hArlBYLLbBrvP3YO0Qk0Zr2b74'
+      apiKey: '{{Your API Key}}'
     })
   ],
   providers: [],
