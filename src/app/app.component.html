@@ -1,0 +1,60 @@
+<div class="section-counter">
+  <div class="counter position-relative">
+    <span>01</span>
+    <ul>
+      <li class="active"></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
+</div>
+<div class="request-info">
+  <span>
+Request Info
+  </span>
+</div>
+
+<navigation></navigation>
+<home-section></home-section>
+<!--Community-->
+<community-section #sectionCommunity [triggerState]="communityState"></community-section>
+
+<!--MAP-->
+<section class="loaction-map" id="location-map">
+  <div class="position-relative">
+    <div class="address-card">
+      <div class="location-head">
+        LOCATION
+      </div>
+      <div class="address">
+        12 Upper St. Martin’s Lane
+        WC2H 9FB, London
+      </div>
+    </div>
+    <agm-map style="width:100%;height:600px;"
+             [zoom]="11"
+             [latitude]="lat"
+             [longitude]="lng"
+             [draggable]="false"
+             [disableDoubleClickZoom]="true"
+             [scrollwheel]="false"
+             [styles]="mapStyle">
+      <agm-marker
+        [iconUrl]="'assets/images/location-icon.png'"
+        [latitude]="lat" [longitude]="lng">
+      </agm-marker> 
+    </agm-map>
+  </div>
+</section>
+
+<!--Menue-->
+<menu-section #sectionMenu [triggerState]="menuState"></menu-section>
+<!--Recipes-->
+<recipe-section></recipe-section>
+<!--Contact Us-->
+<contact-section></contact-section>
+<!--Footer-->
+<footer-section></footer-section>

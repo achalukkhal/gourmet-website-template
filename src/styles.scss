@@ -1,0 +1,899 @@
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+@import "assets/styles/variables";
+@import "assets/styles/fonts";
+// Importing fonts
+@import "~@fortawesome/fontawesome-free/css/all.css";
+
+html, body {
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+
+button {
+  background-color: $cream-100;
+  color: $black-100;
+  font-family: condensedBold;
+  font-size: $font-l;
+  outline: none;
+  border: none;
+  padding: 0.5rem 1rem 0;
+
+  &.btn-stroke {
+    background: transparent;
+    border: 2px $cream-100 solid;
+    font-size: $font-m;
+    font-weight: lighter;
+  }
+}
+
+nav.site-navigation {
+  z-index: 5;
+  position: fixed;
+  color: $black-100;
+
+  .nav-logo {
+    font-size: $font-xl;
+  }
+
+  .nav-logo, .nav-menu-holder {
+    padding: 0.5rem;
+    font-family: condensedBold;
+  }
+
+  .nav-menu-holder {
+    .nav-left-menu, .nav-right-menu {
+      .nav-menu {
+        li {
+          display: inline-block;
+          padding: 0 1rem;
+
+          a {
+            padding: 0.5rem;
+            color: $black-100;
+            font-size: $font-m;
+            font-family: condensedBold;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.section-counter {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  z-index: 5;
+  font-family: condensedBold;
+  transform: translate(0, -50%);
+
+  .counter {
+    span {
+      font-size: $font-m;
+      text-transform: uppercase;
+      position: absolute;
+      left: 44px;
+      top: -10px;
+    }
+
+    > ul {
+      list-style: none;
+
+      li {
+        background: $black-100;
+        width: 20px;
+        height: 2px;
+        border-radius: 4px;
+        margin: 20px 0;
+
+        &.active {
+          width: 35px;
+        }
+      }
+
+      li:first-child, li:last-child {
+        margin: 0;
+      }
+
+
+    }
+  }
+
+
+}
+
+.request-info {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: rotate(-90deg);
+  background-color: $white;
+  z-index: 5;
+  padding: 5px 10px 0;
+  font-family: condensedBold;
+  cursor: pointer;
+
+  span {
+    font-size: $font-l;
+    text-transform: uppercase;
+  }
+}
+
+
+.section-home {
+  min-height: 100vh;
+  text-align: center;
+  background-color: $cream-100;
+
+
+  .center-image {
+    position: relative;
+    width: 100vw;
+
+    img {
+      width: 100%;
+    }
+
+    .stamp.position-top-left {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      top: 15%;
+      left: 20%;
+      background-image: url("assets/images/stamp@2x.png");
+      background-position: center;
+      background-size: cover;
+    }
+
+    .text-container {
+      position: absolute;
+      top: 55%;
+      left: 50%;
+      font-family: condensedBold;
+      transform: translate(-50%, -50%);
+
+      h1, h2, h3 {
+        color: $white;
+      }
+
+      h1 {
+        font-size: 10rem;
+        margin: 0px;
+        line-height: 7rem;
+      }
+
+      h2 {
+        font-size: 7.1rem;
+        margin: 0px;
+        line-height: 8rem;
+
+      }
+
+      h3 {
+        font-size: $font-xxl;
+        margin: 0px;
+        line-height: 1em;
+      }
+    }
+  }
+}
+
+
+// Heading
+
+.heading-block {
+  h2 {
+    color: $black-100;
+    font-family: condensedBold;
+    position: relative;
+    font-size: 5rem;
+    line-height: 3.8rem;
+
+    &.strike {
+      &:after {
+        position: absolute;
+        height: 8px;
+        background-color: $cream-100;
+        width: 120%;
+        content: "";
+        top: 25%;
+        left: -10%;
+        z-index: -1;
+      }
+    }
+  }
+}
+
+
+// community
+
+.community {
+  padding: 5rem 0;
+
+  .community-content {
+    flex-grow: 1;
+    flex-basis: 0;
+
+    position: relative;
+
+    .stripe {
+      background: url("assets/images/detail01@2x.png");
+      background-size: contain;
+      width: 48px;
+      height: 144px;
+      position: absolute;
+      bottom: -1rem;
+      right: 0;
+      z-index: 1;
+    }
+
+    .bg-mat-star {
+      background: url("assets/images/bg-detail@2x.png") center no-repeat;
+      background-size: cover;
+      position: absolute;
+      bottom: -1rem;
+      right: 50%;
+      transform: translate(50%, 0);
+      z-index: 1;
+      width: 200px;
+      height: 144px;
+    }
+
+
+    .bg-mat-dot {
+      background: url("assets/images/detail03@2x.png") center no-repeat;
+      background-size: cover;
+      width: 178px;
+      height: 138px;
+      position: absolute;
+      bottom: -25px;
+      left: 25%;
+      -webkit-transform: translate(50%, 0);
+      transform: translate(-50%, 0);
+      z-index: 1;
+
+
+    }
+
+
+    .block {
+      width: 50%;
+      padding: 1.2rem;
+      z-index: 4;
+      position: relative;
+
+      .image-block {
+        background: $white;
+        width: 100%;
+        box-shadow: #e8e8e8a3 0px 0px 50px;
+        position: relative;
+
+        &:after {
+          content: "";
+          display: block;
+          padding-bottom: 100%;
+        }
+
+        .content {
+          padding: 20px;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          flex-grow: 1;
+          width: 100%;
+
+          .image-container {
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            position: relative;
+
+            img {
+              position: absolute;
+              top: 0;
+              left: 0;
+            }
+          }
+        }
+
+
+        .insta-icon {
+          position: absolute;
+          top: 0;
+          right: 0;
+          background: url("assets/images/instagram-btn@2x.png") center no-repeat;
+          background-size: contain;
+          width: 60px;
+          height: 60px;
+          z-index: 4;
+        }
+      }
+
+      .comment-block {
+        width: 100%;
+        background: $white;
+        box-shadow: #e8e8e8a3 0px 0px 50px;
+        position: relative;
+
+        &:after {
+          content: "";
+          display: block;
+          padding-bottom: 100%;
+        }
+
+        .content {
+          padding: 20px;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          flex-grow: 1;
+
+          h4 {
+            font-family: condensedBold;
+            font-size: $font-xl;
+          }
+
+          p {
+            font-family: gillSans;
+            color: $grey-200;
+            font-size: $font-m;
+          }
+
+          span {
+            display: inline-block;
+            margin: 0 1rem;
+            font-family: condensedBold;
+          }
+        }
+
+
+        &.bg-transparent.shadow-none {
+          .content {
+            flex-direction: row;
+          }
+        }
+
+      }
+    }
+
+
+  }
+
+  .heading-content {
+    .heading-block {
+      display: inline-block;
+    }
+
+    h3 {
+      font-family: condensedBold;
+    }
+  }
+
+}
+
+//menu
+
+.menu {
+  background: $grey-400;
+
+  .section-header {
+    position: absolute;
+    top: 6rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+    text-align: center;
+  }
+
+  .menu-listing {
+    div.column {
+      padding: 15rem 0 0 0;
+      flex-grow: 1;
+      flex-basis: 0;
+      overflow: hidden;
+    }
+
+    > div:nth-child(2),
+    > div:nth-child(3),
+    > div:nth-child(4) {
+      border-left: 1px solid $grey-200;
+      overflow: hidden;
+    }
+
+    > div:nth-child(2) {
+      .menu-list {
+        margin-top: 10rem;
+      }
+
+    }
+
+    > div:nth-child(3) {
+      .menu-list {
+        margin-top: 6rem;
+      }
+
+    }
+
+    > div:nth-child(4) {
+      .menu-list {
+        margin-top: 1rem;
+      }
+
+    }
+
+
+    .menu-list {
+      h3 {
+        font-size: 5rem;
+        font-family: condensedBold;
+        margin-left: -0.7rem;
+      }
+
+      .item {
+        width: 80%;
+        margin-bottom: 4rem;
+        padding: 0 10%;
+
+        h4 {
+          font-size: $font-m;
+          font-family: condensedBold;
+        }
+
+        p {
+
+          font-family: gillSans;
+          font-size: $font-m;
+          color: $grey-200;
+        }
+      }
+
+    }
+
+    div.column:first-child {
+      .menu-list {
+        h3 {
+          margin-left: 0rem;
+        }
+      }
+    }
+  }
+}
+
+.loaction-map{
+
+  .address-card{
+    position: absolute;
+    background: $white;
+    z-index: 10;
+    top: 8rem;
+    left: 10rem;
+    text-align: center;
+    width: 280px;
+
+    .location-head {
+      font-family: condensedBold;
+      font-size: 5rem;
+      margin-top: -2rem;
+      line-height: 5rem;
+    }
+
+    .address{
+      font-family: gillSans;
+      font-size: $font-m;
+      color: $grey-100;
+      padding: 0 2rem 2rem;
+      text-align: left;
+    }
+  }
+}
+
+
+// Our Recipes
+
+.recipes {
+
+  background: $white-100;
+
+  .heading-block {
+    h2 {
+      color: $black-100;
+      font-family: condensedBold;
+      position: relative;
+      font-size: 5rem;
+      line-height: 3.8rem;
+
+      z-index: 1;
+
+      &.strike {
+        &:after {
+          position: absolute;
+          height: 8px;
+          background-color: $cream-100;
+          width: 120%;
+          content: "";
+          top: 25%;
+          left: -10%;
+          z-index: -1;
+        }
+      }
+    }
+
+    h2:first-child {
+      font-size: 3rem;
+      margin: 0;
+    }
+  }
+
+
+  .recipe-card {
+    &.size-xl {
+      width: 450px;
+
+      &:first-child {
+        padding-right: 1.5rem;
+      }
+
+      .recipe-image {
+        height: 450px;
+
+      }
+
+    }
+
+    &.size-m {
+      width: 300px;
+
+      .recipe-image {
+        height: 300px;
+
+      }
+    }
+
+    .card-body {
+      border: solid $grey-300 1px;
+      padding: 0px;
+
+      .chef-choice-stamp {
+        width: 130px;
+        height: 130px;
+        position: absolute;
+        top: -10%;
+        z-index: 4;
+        right: 5%;
+
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .recipe-image {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+
+        img {
+          min-height: 100%;
+          margin: 0 auto;
+        }
+
+
+        .next-icon {
+          background: url("assets/images/go-btn@2x.png") no-repeat center;
+          background-size: contain;
+          width: 80px;
+          height: 80px;
+          position: absolute;
+          bottom: 0;
+          right: 0;
+        }
+
+        .serving-count {
+          overflow: hidden;
+          position: absolute;
+          z-index: 2;
+
+          .bg {
+            filter: blur(5px);
+            background: rgba(132, 132, 132, 0.5);
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: -1px;
+            left: -1px;
+            z-index: -1;
+          }
+
+          .text {
+            padding: 1.5rem 2rem;
+            text-align: center;
+            font-family: condensedBold;
+            z-index: 1;
+
+            span {
+              color: $white;
+              font-size: $font-xl;
+              line-height: 2.5rem;
+              text-transform: uppercase;
+              display: block;
+
+              &:nth-child(2) {
+                font-size: $font-m;
+              }
+            }
+          }
+        }
+      }
+
+
+      .recipe-description {
+        background: $white;
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+
+        .info, .title {
+          font-family: condensedBold;
+          text-transform: uppercase;
+        }
+
+        .info {
+          font-size: $font-m;
+          color: $grey-100;
+          padding: 1rem 0;
+        }
+
+        .title {
+          h3 {
+            font-size: $font-l;
+          }
+        }
+
+        .description {
+          font-family: gillSans;
+
+          p {
+            //white-space: nowrap;
+            //width: 100%;
+            //overflow: hidden;
+            //text-overflow: ellipsis;
+          }
+        }
+      }
+
+    }
+
+    .author-name {
+      font-family: condensedBold;
+      text-transform: uppercase;
+      text-align: right;
+      font-size: $font-m;
+    }
+
+  }
+
+
+  .navigation-button {
+    .next {
+      background: url("assets/images/next@2x.png") no-repeat center;
+      cursor: pointer;
+      background-size: contain;
+      width: 49px;
+      height: 21px;
+      margin-left: 1rem;
+    }
+
+    .previous {
+      background: url("assets/images/back@2x.png") no-repeat center;
+      cursor: pointer;
+      background-size: contain;
+      width: 49px;
+      height: 21px;
+    }
+
+    .next, .previous {
+      &.inactive {
+        opacity: 0.5;
+      }
+    }
+  }
+
+}
+
+// Contact Us
+
+
+.contact-us {
+  background: $cream-100;
+  padding: 5.9rem 0;
+
+  .heading-block-white {
+    h2 {
+      color: $black-100;
+      font-family: condensedBold;
+      position: relative;
+      font-size: 3rem;
+      line-height: 3.8rem;
+      z-index: 1;
+
+      &.strike {
+        &:after {
+          position: absolute;
+          height: 8px;
+          background-color: $white;
+          width: 120%;
+          content: "";
+          top: 25%;
+          left: -10%;
+          z-index: -1;
+        }
+      }
+    }
+
+    h2:nth-child(2).strike {
+      font-size: 5rem;
+    }
+  }
+
+  .patch {
+    position: absolute;
+    background: url("assets/images/detail02@2x.png") center no-repeat;
+    background-size: contain;
+    width: 180px;
+    height: 120px;
+    top: -40%;
+    right: 50%;
+  }
+
+  .brief {
+    .contact-us-heading {
+
+    }
+
+    .contact-us-text-description {
+      p {
+        font-family: gillSans;
+        font-size: $font-m;
+        color: $grey-100;
+      }
+    }
+  }
+
+  form {
+
+    .from-group {
+      font-size: $font-m;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 2rem;
+
+      label {
+        text-transform: uppercase;
+        font-family: condensedBold;
+      }
+
+      input, select {
+        background: transparent;
+        font-family: gillSans;
+        border: none;
+        border-bottom: solid 2px $black-100;
+        padding: 0 0 0.5rem 0;
+        outline: none;
+      }
+
+      select option:first-child {
+        color: #999;
+      }
+    }
+
+    .form-button[type=submit] {
+      font-family: condensedBold;
+      text-transform: uppercase;
+      font-size: $font-m;
+      color: $cream-100;
+      background: $black-100;
+      border: none;
+      outline: none;
+      padding: 0.3rem 1.5rem 0;
+    }
+  }
+
+
+}
+
+// footer
+
+footer {
+  background: $black-100;
+
+  ul.footer-menu {
+    margin-left: 4rem;
+
+    .menu-heading {
+      font-size: $font-m;
+      color: $cream-100;
+      font-family: condensedBold;
+    }
+
+
+    li {
+      list-style: none;
+
+      a {
+        font-family: gillSans;
+        font-size: $font-m;
+        color: $grey-200;
+        padding: 0.5rem 0;
+        display: block;
+      }
+    }
+  }
+
+  .footer-logo {
+    color: $white;
+    text-align: right;
+    font-family: condensedBold;
+
+    span {
+      font-size: $font-xl;
+    }
+
+    h1 {
+      font-size: 4rem;
+    }
+  }
+
+  .copy-right {
+    font-family: gillSans;
+    font-size: $font-m;
+    color: $grey-100;
+  }
+
+  .social-links {
+    li {
+      list-style: none;
+      display: inline-block;
+
+      a {
+        width: 34px;
+        height: 34px;
+        display: block;
+
+        &.facebook {
+          background: url("assets/images/social.png") 0 0;
+        }
+
+        &.twitter {
+          background: url("assets/images/social.png") -34px 0;
+        }
+
+        &.instagram {
+          background: url("assets/images/social.png") -68px 0;
+        }
+
+        &.pinit {
+          background: url("assets/images/social.png")  -132px 0;
+        }
+
+        &.youtube {
+          background: url("assets/images/social.png") -104px 0;
+        }
+
+        &.trumbler {
+          background: url("assets/images/social.png")  -164px 0;
+        }
+      }
+    }
+  }
+}
+
